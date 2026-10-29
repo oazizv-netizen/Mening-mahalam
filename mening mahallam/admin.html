@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin paneli - OQJANGAL MAHALLASI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ADMIN PANELI</h1>
+        <nav>
+            <a href="index.html">Saytga qaytish</a>
+        </nav>
+    </header>
+
+    <main>
+
+      <section id="boshqarish" class="admin-qism">
+    <div class="admin">
+
+        <!-- Chap panel: menyu -->
+        <div class="yon-menyu">
+            <h3>Boshqaruv</h3>
+            <a href="#a-elonlar">E'lonlar</a>
+            <a href="#a-tadbirlar">Tadbirlar</a>
+            <a href="#a-foydalanuvchilar">Foydalanuvchilar</a>
+            <a href="#a-malumot">Mahalla ma'lumotlari</a>
+        </div>
+
+        <!-- O'ng panel: ish maydoni -->
+        <div class="ish-maydoni">
+
+            <h2 id="a-elonlar">E'lonlar</h2>
+            <table class="jadval">
+                <tr><th>№</th><th>Sarlavha</th><th>Kim berdi</th><th>Amal</th></tr>
+                <tr>
+                    <td>1</td><td>Velosiped sotiladi</td><td>Ali</td>
+                    <td>
+                        <button class="tasdiq">Tasdiqlash</button>
+                        <button class="tahrir">Tahrirlash</button>
+                        <button class="ochir">O'chirish</button>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 id="a-tadbirlar">Tadbirlar</h2>
+            <button class="tasdiq">+ Yangi tadbir qo'shish</button>
+            <table class="jadval">
+                <tr><th>№</th><th>Nomi</th><th>Sana</th><th>Amal</th></tr>
+                <tr>
+                    <td>1</td><td>Hashar</td><td>2026-10-20</td>
+                    <td>
+                        <button class="tahrir">Tahrirlash</button>
+                        <button class="ochir">O'chirish</button>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 id="a-foydalanuvchilar">Foydalanuvchilar</h2>
+            <table class="jadval">
+                <tr><th>№</th><th>Ism</th><th>Telefon</th><th>Amal</th></tr>
+                <tr>
+                    <td>1</td><td>Ali</td><td>+998 90 123 45 67</td>
+                    <td>
+                        <button class="tahrir">Bloklash</button>
+                        <button class="ochir">O'chirish</button>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 id="a-malumot">Mahalla ma'lumotlari</h2>
+            <form id="elonForm" action="#" method="post">
+                <label for="aholi">Aholi soni</label>
+                <input type="text" id="aholi" value="5554">
+
+                <label for="rais">Mahalla raisi</label>
+                <input type="text" id="rais" value="Toxirov Toxir">
+
+                <label for="tel">Telefon</label>
+                <input type="tel" id="tel" value="+998 97 007 57 99">
+
+                <button type="submit">Saqlash</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Oqjangal mahallasi</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,854 @@
+
+/* =====================================
+   OQJANGAL MFY — UMUMIY DIZAYN
+   Barcha HTML sahifalar uchun
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --asosiy: #1769aa;
+    --quyuq: #104675;
+    --och: #eaf4ff;
+    --oq: #ffffff;
+    --matn: #203348;
+    --ikkilamchi: #64778a;
+    --chegara: #dce8f2;
+    --fon: #f4f8fc;
+    --yashil: #16845b;
+    --soya: 0 8px 25px rgba(16, 70, 117, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fon);
+    color: var(--matn);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+a {
+    color: var(--asosiy);
+    transition: 0.25s ease;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* =====================================
+   YUQORI QISM
+===================================== */
+
+header {
+    background: var(--oq);
+    border-bottom: 1px solid var(--chegara);
+    box-shadow: 0 3px 15px rgba(16, 70, 117, 0.06);
+}
+
+header h1 {
+    text-align: center;
+    color: var(--quyuq);
+    padding: 25px 15px;
+    font-size: clamp(22px, 3vw, 32px);
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+/* Agar header ichida logotip bo'lsa */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 5%;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: var(--asosiy);
+    color: var(--oq);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.brand h1 {
+    padding: 0;
+    text-align: left;
+    font-size: 24px;
+}
+
+.brand p {
+    margin: 3px 0 0;
+    color: var(--ikkilamchi);
+    font-size: 13px;
+}
+
+/* =====================================
+   NAVIGATSIYA VA MENYU
+===================================== */
+
+.navbar {
+    min-height: 66px;
+    background: var(--asosiy);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 5%;
+}
+
+.menu {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.menu summary {
+    list-style: none;
+    cursor: pointer;
+    background: var(--oq);
+    color: var(--asosiy);
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.25s;
+}
+
+.menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu summary::after {
+    content: " ▼";
+    font-size: 10px;
+}
+
+.menu summary:hover,
+.menu[open] summary {
+    background: var(--och);
+}
+
+.menu-links {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 230px;
+    max-width: calc(100vw - 30px);
+    background: var(--oq);
+    border: 1px solid var(--chegara);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(16, 70, 117, 0.17);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.menu-links a {
+    display: block;
+    padding: 11px 16px;
+    color: var(--matn);
+    text-decoration: none;
+    border-bottom: 1px solid #edf2f7;
+    transition: 0.2s;
+}
+
+.menu-links a:last-child {
+    border-bottom: none;
+}
+
+.menu-links a:hover {
+    background: var(--och);
+    color: var(--asosiy);
+    padding-left: 23px;
+}
+
+.logo {
+    color: var(--oq);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+
+.logo:hover {
+    color: var(--och);
+}
+
+.nav-caption {
+    color: var(--oq);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+   ASOSIY SAHIFA VA UMUMIY KONTEYNER
+===================================== */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    min-height: 55vh;
+}
+
+section {
+    margin-bottom: 28px;
+    padding: 28px;
+    background: var(--oq);
+    border: 1px solid var(--chegara);
+    border-radius: 14px;
+    box-shadow: var(--soya);
+}
+
+article {
+    min-width: 0;
+}
+
+h2 {
+    color: var(--quyuq);
+    font-size: clamp(23px, 3vw, 30px);
+    line-height: 1.35;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--asosiy);
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 20px 0 10px;
+}
+
+h4 {
+    color: var(--quyuq);
+    margin: 14px 0 8px;
+}
+
+p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+small {
+    color: var(--ikkilamchi);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--chegara);
+    margin: 25px 0;
+}
+
+/* =====================================
+   BOSH SAHIFA BANNERI
+===================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 35px;
+    background: var(--oq);
+    border: 1px solid var(--chegara);
+    border-radius: 18px;
+    box-shadow: var(--soya);
+}
+
+.hero h2 {
+    font-size: clamp(28px, 3.5vw, 42px);
+    color: var(--quyuq);
+    line-height: 1.2;
+}
+
+.hero p {
+    color: var(--ikkilamchi);
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--asosiy);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+   RASMLAR
+===================================== */
+
+.katta-rasm {
+    display: block;
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+section img:not(.logo img) {
+    max-width: 100%;
+}
+
+main img {
+    border-radius: 10px;
+}
+
+.image-caption {
+    position: relative;
+    margin: -25px 14px 0;
+    padding: 12px 15px;
+    background: var(--oq);
+    border-radius: 9px;
+    box-shadow: var(--soya);
+}
+
+/* =====================================
+   RO'YXATLAR
+===================================== */
+
+ul,
+ol {
+    padding-left: 26px;
+    margin: 12px 0;
+}
+
+li {
+    margin: 7px 0;
+    padding-left: 3px;
+}
+
+li::marker {
+    color: var(--asosiy);
+}
+
+/* =====================================
+   KARTOCHKALAR VA STATISTIKA
+===================================== */
+
+.stats-grid,
+.cards,
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.stat-card,
+.card,
+.quick-card {
+    min-width: 0;
+    padding: 22px;
+    background: var(--oq);
+    border: 1px solid var(--chegara);
+    border-radius: 13px;
+    box-shadow: 0 4px 15px rgba(16, 70, 117, 0.04);
+    transition: 0.25s ease;
+}
+
+.stat-card:hover,
+.card:hover,
+.quick-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--soya);
+    border-color: #a9cfee;
+}
+
+.stat-icon,
+.quick-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: var(--och);
+    color: var(--asosiy);
+    font-size: 23px;
+}
+
+.stat-number {
+    color: var(--quyuq);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.stat-card h3,
+.card h3,
+.quick-card h3 {
+    margin-top: 12px;
+}
+
+.quick-card {
+    display: block;
+    color: var(--matn);
+    text-decoration: none;
+}
+
+.quick-card p {
+    color: var(--ikkilamchi);
+    font-size: 14px;
+}
+
+.quick-card > span {
+    color: var(--asosiy);
+    font-weight: bold;
+}
+
+/* =====================================
+   TUGMALAR VA HAVOLALAR
+===================================== */
+
+button,
+.btn,
+input[type="submit"],
+input[type="button"] {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 19px;
+    background: var(--asosiy);
+    color: var(--oq);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background: var(--quyuq);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: var(--oq);
+    color: var(--asosiy);
+    border: 1px solid var(--asosiy);
+}
+
+.btn-outline:hover {
+    background: var(--och);
+    color: var(--quyuq);
+}
+
+/* Oddiy matn havolalari */
+main a:not(.btn):not(.quick-card) {
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   JADVALLAR
+===================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--oq);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 13px 15px;
+    border: 1px solid var(--chegara);
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: var(--asosiy);
+    color: var(--oq);
+    font-weight: bold;
+}
+
+tr:nth-child(even) td {
+    background: #f4f8fc;
+}
+
+tr:hover td {
+    background: var(--och);
+}
+
+/* =====================================
+   FORMALAR
+===================================== */
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+    color: var(--quyuq);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbdbea;
+    border-radius: 8px;
+    background: var(--oq);
+    color: var(--matn);
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--asosiy);
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.12);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    margin-right: 7px;
+}
+
+input[type="file"] {
+    padding: 9px;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+    width: auto;
+    margin-top: 12px;
+}
+
+/* =====================================
+   AUDIO, VIDEO VA HUJJATLAR
+===================================== */
+
+audio,
+video {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 18px 0;
+    border-radius: 10px;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    border: 0;
+    border-radius: 10px;
+    margin: 18px 0;
+}
+
+embed,
+object {
+    max-width: 100%;
+}
+
+figure {
+    margin: 20px 0;
+}
+
+figcaption {
+    color: var(--ikkilamchi);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/* =====================================
+   E'LONLAR VA XABARLAR
+===================================== */
+
+.announcement,
+.elon,
+.xabar {
+    padding: 22px;
+    margin: 18px 0;
+    background: var(--oq);
+    border: 1px solid var(--chegara);
+    border-left: 4px solid var(--asosiy);
+    border-radius: 10px;
+}
+
+.announcement h2,
+.elon h3,
+.xabar h3 {
+    margin-top: 0;
+}
+
+.muted {
+    color: var(--ikkilamchi);
+}
+
+/* =====================================
+   PASTKI QISM
+===================================== */
+
+footer {
+    margin-top: 40px;
+    padding: 25px 5%;
+    background: var(--quyuq);
+    color: var(--oq);
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #e1effa;
+}
+
+footer a {
+    color: var(--oq);
+}
+
+/* =====================================
+   PLANSHEТ VA KICHIK EKRANLAR
+===================================== */
+
+@media (max-width: 900px) {
+    main {
+        width: 94%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .stats-grid,
+    .cards,
+    .quick-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =====================================
+   TELEFON
+===================================== */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+        padding: 20px 10px;
+    }
+
+    .brand {
+        padding: 16px 4%;
+    }
+
+    .brand h1 {
+        font-size: 19px;
+    }
+
+    .navbar {
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .nav-caption {
+        font-size: 9px;
+        text-align: right;
+    }
+
+    .menu summary {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .menu-links {
+        width: 205px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 19px;
+        gap: 20px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    .hero-image img,
+    .katta-rasm {
+        max-height: 280px;
+        height: auto;
+    }
+
+    .stats-grid,
+    .cards,
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card,
+    .card,
+    .quick-card {
+        padding: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: normal;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    iframe {
+        min-height: 220px;
+    }
+
+    footer {
+        padding: 22px 5%;
+    }
+}
+.slider {
+    width: 100%;
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: almashish 16s infinite;
+}
+
+/* 1-rasm */
+.slider img:nth-child(1) {
+    animation-delay: 0s;
+}
+.slider img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+/* 2-rasm */
+.slider img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* 3-rasm */
+.slider img:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes almashish {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .slider {
+        height: 260px;
+    }
+}
